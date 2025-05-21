@@ -9,9 +9,10 @@
     row-gap: 80px;
     align-items: center;
     justify-content: center;
+    padding-top: 60px;
   }
   
-  .place {
+  .places__content {
     display: grid;
     gap: 40px;
     max-width: 984px;
@@ -28,7 +29,7 @@
     align-items: start;
   }
   
-  .place__title {
+  .places__content-item-title{
     font-family: "Inter", arial, sans-serif;
     font-size: 72px;
     font-weight: 900;
@@ -40,17 +41,17 @@
     grid-area: title;
   }
   
-  .place__image {
+  .places__content-image{
     width: 100%;
     max-width: 460px;
     grid-area: image;
   }
   
-  .place__image:hover{
+  .places__content-image:hover{
     background: #00000080;
   }
   
-  .place__link {
+  .places__content-link {
     font-family: "Inter", arial, sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -71,11 +72,11 @@
     grid-area: link;
   }
   
-  .place__link:hover {
+  .places__content-link:hover {
     background: linear-gradient(90deg, rgba(2, 120, 254, 0.25) 0%, rgba(0, 58, 123, 0.25) 99.98%);
   }
   
-  .place__subtitle {
+  .places__content-item-subtitle {
     max-width: 456px;
     width: 100%;
     margin: 0;
@@ -83,7 +84,7 @@
     grid-area: subtitle;
   }
   
-  .place__artist {
+  .places__content-item-artist {
     font-family: "Inter", arial, sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -92,7 +93,7 @@
     text-align: left;
   }
   
-  .place__artist-name {
+  .places__content-artist-name {
     font-family: "Inter", arial, sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -100,7 +101,7 @@
     text-align: left;
   }
   
-  .place__paragraphs {
+  .places__content-paragraphs {
     display: grid;
     grid-row-start: 2;
     grid-row-end: 4;
@@ -108,7 +109,7 @@
     overflow: hidden;
   }
   
-  .place__text {
+  .places__content-text {
     font-family: "Inter", arial, sans-serif;
     margin-top: 0;
     margin: auto;
@@ -124,17 +125,17 @@
   /*Media query para pantalla 768px*/
   
   @media (min-width: 501px) and (max-width: 768px) {
-    .place {
+    .places {
       max-width: 720px;
       width: 100%;
     }
   
-    .place__image {
+    .places__content-image {
       width: 100%;
       max-width: 340px;
     }
   
-    .place__title {
+    .places__content-item-title {
       max-width: 340px;
       width: 100%;
       font-size: 42px;
@@ -142,19 +143,19 @@
       margin: 0;
     }
   
-    .place__paragraphs {
+    .places__content-paragraphs {
       max-width: 352px;
       width: 100%;
       font-size: 16px;
       line-height: 26.08px;
     }
   
-    .place__subtitle {
+    .places__content-item-subtitle {
       max-width: 295px;
       width: 100%;
     }
   
-    .place__link {
+    .places__content-link {
       max-width: 355px;
       width: 100%;
     }
@@ -166,7 +167,7 @@
     .places {
       row-gap: 50px;
     }
-    .place {
+    .places {
       max-width: 320px;
       width: 100%;
       gap: 0;
@@ -181,7 +182,7 @@
         "link";
     }
   
-    .place__title {
+    .places__content-item-title {
       max-width: 288px;
       width: 100%;
       font-size: 32px;
@@ -189,19 +190,19 @@
       grid-area: title;
     }
   
-    .place__subtitle {
+    .places__content-item-subtitle {
       max-width: 288px;
       width: 100%;
       grid-area: subtitle;
     }
   
-    .place__image {
+    .places__content-image {
       width: 100%;
       max-width: 320px;
       grid-area: image;
     }
   
-    .place__link {
+    .places__content-link {
       max-width: 288px;
       width: 100%;
       font-size: 14px;
@@ -210,11 +211,11 @@
       height: 48px;
     }
   
-    .places__text {
+    .places__content-paragraphs {
       margin: 0px 16px;
     }
   
-    .place__paragraphs {
+    .places__content-paragraphs {
       max-width: 288px;
       width: 100%;
       font-size: 16px;

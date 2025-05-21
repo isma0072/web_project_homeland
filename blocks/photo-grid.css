@@ -1,55 +1,70 @@
-.photo{
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-gap: 16px 16px;
-    max-width: 1184px;
-    margin: auto;
-    background-position: center;
-    margin-bottom: 92px;
+.photo-grid{
+    margin: 118px auto 0;
+    width: 1184px;
+    height: 442px;
+    display: flex;
 }
 
-.photo-item{
+.photo-grid__content{
     width: 100%;
-    max-height: 213px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px 16px;
+}
+
+.photo-grid__content-item {
+  width: 284px;
+  height: 213px;
 }
 
 /* Query para pantalla 768px */
-@media (min-width: 501px) and (max-width: 768px){
-    .photo {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(4, auto);
-        grid-gap: 16px 16px;
-        max-width: 720px;
-        max-height: 1104px;
-        margin: 64px auto 88px;
-      }
-    
-      .photo__item {
-        max-width: 352px;
-        max-height: 264px;
-      }
+@media screen and (min-width: 768px) and (max-width: 1280px){
+    .photo-grid {
+      margin: 64px auto 0;
+      width: 720px;
+      height: 1104px;
+    }
+
+    .photo-grid__content {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    .photo-grid__content-item {
+      width: 352px;
+      height: 264px;
+    }
+
+    .photo-grid__content-item-image {
+      width: 352px;
+      height: 264px;
+    }
 }
 
 /*Media query para pantalla 320px*/
 
-@media (max-width: 500px) {
-    .photo {
-      display: grid;
-      grid-template-columns: repeat(1, auto);
-      grid-template-rows: repeat(8, auto);
-      grid-gap: 12px;
-      max-width: 288px;
-      width: 100%;
-      max-height: 100%;
-      margin: 38px auto 62px;
-      overflow: hidden;
-    }
-  
-    .photo__item {
-      max-width: 288px;
-      max-height: 216px;
-    }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .photo-grid {
+    margin: 38px auto 0;
+    width: 288px;
+    height: 1812px;
+  }
+
+  .photo-grid__content {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    row-gap: 12px;
+  }
+
+  .photo-grid__content-item {
+    width: 288px;
+    height: 216px;
+  }
+
+  .photo-grid__content-item-image {
+    width: 288px;
+    height: 216px;
+  }
   }
   
