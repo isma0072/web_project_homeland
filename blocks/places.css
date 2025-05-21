@@ -167,7 +167,7 @@
     .places {
       row-gap: 50px;
     }
-    .places {
+    .places__content {
       max-width: 320px;
       width: 100%;
       gap: 0;
