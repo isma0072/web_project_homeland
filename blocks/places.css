@@ -1,0 +1,225 @@
+.places {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    row-gap: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .place {
+    display: grid;
+    gap: 40px;
+    max-width: 984px;
+    width: 100%;
+    -ms-grid-columns: 1fr 40px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto 40px auto 40px auto;
+    grid-template-areas:
+      "title subtitle "
+      "image text"
+      "link text";
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+  }
+  
+  .place__title {
+    font-family: "Inter", arial, sans-serif;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 76px;
+    text-align: left;
+    max-width: 460px;
+    width: 100%;
+    margin: 0;
+    grid-area: title;
+  }
+  
+  .place__image {
+    width: 100%;
+    max-width: 460px;
+    grid-area: image;
+  }
+  
+  .place__image:hover{
+    background: #00000080;
+  }
+  
+  .place__link {
+    font-family: "Inter", arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: center;
+    width: 300px;
+    max-width: 75%;
+    height: 60px;
+    padding: 13px 20px 13px 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(90deg, #0278FE 0%, #003A7B 99.98%);
+    box-sizing: border-box;
+    grid-area: link;
+  }
+  
+  .place__link:hover {
+    background: linear-gradient(90deg, rgba(2, 120, 254, 0.25) 0%, rgba(0, 58, 123, 0.25) 99.98%);
+  }
+  
+  .place__subtitle {
+    max-width: 456px;
+    width: 100%;
+    margin: 0;
+    align-self: end;
+    grid-area: subtitle;
+  }
+  
+  .place__artist {
+    font-family: "Inter", arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+    letter-spacing: 0.12em;
+    text-align: left;
+  }
+  
+  .place__artist-name {
+    font-family: "Inter", arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+  }
+  
+  .place__paragraphs {
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    overflow: hidden;
+  }
+  
+  .place__text {
+    font-family: "Inter", arial, sans-serif;
+    margin-top: 0;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29.34px;
+    text-align: left;
+    max-width: 483px;
+    width: 100%;
+    row-gap: 25px;
+  }
+  
+  /*Media query para pantalla 768px*/
+  
+  @media (min-width: 501px) and (max-width: 768px) {
+    .place {
+      max-width: 720px;
+      width: 100%;
+    }
+  
+    .place__image {
+      width: 100%;
+      max-width: 340px;
+    }
+  
+    .place__title {
+      max-width: 340px;
+      width: 100%;
+      font-size: 42px;
+      line-height: 46px;
+      margin: 0;
+    }
+  
+    .place__paragraphs {
+      max-width: 352px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 26.08px;
+    }
+  
+    .place__subtitle {
+      max-width: 295px;
+      width: 100%;
+    }
+  
+    .place__link {
+      max-width: 355px;
+      width: 100%;
+    }
+  }
+  
+  /*Media query para pantalla 320px*/
+  
+  @media (max-width: 500px) {
+    .places {
+      row-gap: 50px;
+    }
+    .place {
+      max-width: 320px;
+      width: 100%;
+      gap: 0;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      -ms-grid-rows: auto 0 auto 0 auto 0 auto 0 auto;
+      grid-template-areas:
+        "title"
+        "subtitle"
+        "image"
+        "paragraphs"
+        "link";
+    }
+  
+    .place__title {
+      max-width: 288px;
+      width: 100%;
+      font-size: 32px;
+      line-height: 35px;
+      grid-area: title;
+    }
+  
+    .place__subtitle {
+      max-width: 288px;
+      width: 100%;
+      grid-area: subtitle;
+    }
+  
+    .place__image {
+      width: 100%;
+      max-width: 320px;
+      grid-area: image;
+    }
+  
+    .place__link {
+      max-width: 288px;
+      width: 100%;
+      font-size: 14px;
+      line-height: 16.94px;
+      grid-area: link;
+      height: 48px;
+    }
+  
+    .places__text {
+      margin: 0px 16px;
+    }
+  
+    .place__paragraphs {
+      max-width: 288px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 26.08px;
+      grid-area: paragraphs;
+    }
+  }
+  
